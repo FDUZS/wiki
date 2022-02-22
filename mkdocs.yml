@@ -1,2 +1,4 @@
 site_name: My Docs
 site_url: https://fduzs.github.io/wiki
+theme:
+  name: material
