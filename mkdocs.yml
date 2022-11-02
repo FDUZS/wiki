@@ -2,3 +2,9 @@ site_name: My Docs
 site_url: https://fduzs.github.io/wiki
 theme:
   name: material
+
+# Content tabs
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
