@@ -99,8 +99,20 @@ an extension of SOCKS4.
 
 ```text
 Host github.com
+    HostName github.com
+    # Port 22
     User git
-    ProxyCommand connect -S 127.0.0.1:1080 %h %p
+    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
+```
+
+如果 22 端口禁止访问，报 `kex_exchange_identification: Connection closed by remote host` 错误时，替换为
+
+```text
+Host github.com
+    HostName ssh.github.com
+    Port 443
+    User git
+    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 ```
 
 这里 `-S` 表示使用 socks5 代理，如果是 http 代理则为 `-H`。connect 工具 [Git for Windows](https://gitforwindows.org) 自带。
@@ -108,18 +120,22 @@ Host github.com
 我自己的话，则是设置成这样：
 
 ```text
-# Reference: https://bitbucket.org/gotoh/connect/wiki/Home
-
 Host github.com
+    HostName ssh.github.com
+    Port 443
     User git
-    Hostname github.com
-    Port 22
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 
-Host ssh.github.com
+Host github.com
+    HostName github.com
+    # Port 22
     User git
-    Hostname ssh.github.com
-    Port 443
+    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
+
+Host dev
+    HostName <server_ip>
+    # Port 22
+    User root
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 
 Host *
