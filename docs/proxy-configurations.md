@@ -1,5 +1,7 @@
 # 常用代理设置
 
+**桌面端还在用其他代理软件的新手，强烈建议将其换成 Clash for Windows 并启用 [TUN 模式]，避免浪费时间作无意义的折腾**
+
 ## CMD
 
 ```shell
@@ -57,9 +59,7 @@ netsh winhttp reset proxy
 
 ## 为 Git 设置代理
 
-众所周知，`git clone` 有两种方式，代理设置方式也不一样：
-
-### Clone with HTTPS
+### Git over HTTPS
 
 设置代理：
 
@@ -84,14 +84,11 @@ git config --global http.https://github.com.proxy socks5h://127.0.0.1:1080
 
 socks5h 和 socks5 的区别：
 
-> In a proxy string, socks5h:// and socks4a:// mean that the hostname is
-resolved by the SOCKS server. socks5:// and socks4:// mean that the
-hostname is resolved locally. socks4a:// means to use SOCKS4a, which is
-an extension of SOCKS4.
+> In a proxy string, socks5h:// and socks4a:// mean that the hostname is resolved by the SOCKS server. socks5:// and socks4:// mean that the hostname is resolved locally. socks4a:// means to use SOCKS4a, which is an extension of SOCKS4.
 
-来源：[Differentiate socks5h from socks5 and socks4a from socks4 when handling proxy string](https://github.com/urllib3/urllib3/issues/1035)
+来源：[Differentiate socks5h from socks5 and socks4a from socks4 when handling proxy string]
 
-### Clone with SSH
+### Git over SSH
 
 需要修改 `~/.ssh/config` 文件
 
@@ -102,6 +99,7 @@ Host github.com
     HostName github.com
     # Port 22
     User git
+    IdentityFile ~/.ssh/git_ed25519
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 ```
 
@@ -112,10 +110,11 @@ Host github.com
     HostName ssh.github.com
     Port 443
     User git
+    IdentityFile ~/.ssh/git_ed25519
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 ```
 
-这里 `-S` 表示使用 socks5 代理，如果是 http 代理则为 `-H`。connect 工具 [Git for Windows](https://gitforwindows.org) 自带。
+这里 `-S` 表示使用 socks5 代理，如果是 http 代理则为 `-H`。connect 工具 [Git for Windows] 自带。
 
 我自己的话，则是设置成这样：
 
@@ -124,102 +123,25 @@ Host github.com
     HostName ssh.github.com
     Port 443
     User git
+    IdentityFile ~/.ssh/git_ed25519
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 
 Host github.com
     HostName github.com
     # Port 22
     User git
-    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
-
-Host dev
-    HostName <server_ip>
-    # Port 22
-    User root
+    IdentityFile ~/.ssh/git_ed25519
     ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
 
 Host *
-    IdentityFile "C:\Users\Zheng\.ssh\id_rsa"
+    # PreferredAuthentications publickey
     ServerAliveInterval 30
     TCPKeepAlive yes
 ```
 
-来源：[laispace/git 设置和取消代理](https://gist.github.com/laispace/666dd7b27e9116faece6)
+来源：[laispace/git 设置和取消代理]
 
-## SSH 加速
-
-### 通过代理连接
-
-其实就是借助 [ProxyCommand](https://man.openbsd.org/ssh_config.5#ProxyCommand) 这个选项来实现的，并且有几种不同的写法。而且，Windows 和 macOS 下的实现方式也不一样。
-
-假定本地代理地址为 `127.0.0.1`，端口为 `1080`，代理方式为 `socks5`，要连接的远程主机用户为 `root`，主机 IP 为 `1.1.1.1`。
-
-#### Windows - connect
-
-如果下面无效的话请先安装 [connect](https://web.archive.org/web/20080516100455/http://www.meadowy.org/~gotoh/projects/connect) 这个小工具并将其添加至环境变量，或者直接在 Git Bash 中操作。
-
-先解释一下参数含义：`connect` 即是上面安装的工具，`-S` 表示使用 socks5 代理，`-a none` 表示本地代理无需认证，`%h %p` 分别对应远程主机名和端口。
-
-- 写法一
-
-```shell
-ssh -o "ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p" root@1.1.1.1
-```
-
-- 写法二
-
-```shell
-ssh -o ProxyCommand="connect -S 127.0.0.1:1080 -a none %h %p" root@1.1.1.1
-```
-
-- 写法三
-
-写到 `~/.ssh/config` 文件中，如针对 GitHub 可以这样写：
-
-```text
-Host github.com
-    User git
-    Hostname github.com
-    Port 22
-    ProxyCommand connect -S 127.0.0.1:1080 -a none %h %p
-```
-
-#### macOS - netcat
-
-macOS 下可以直接看这篇[文章](https://www.xiebruce.top/650.html#i)。
-
-### 借助跳板机连接
-
-太详细的我也懒得写了，目前只写一下 Windows 如何实现。ProxyJump 和 ProxyCommand 都是可以的，并且如果同时写在配置文件中，只能是最先匹配到的那个生效。
-
-假定跳板机和真正要登录的远程主机用户都为 `root`，跳板机 IP 为 `8.8.8.8`，要登录的主机 IP 为 `1.1.1.1`。
-
-各参数含义与第一部分一致，`-W` 表示将客户端的标准输入输出转发到相应端口的远程主机上。
-
-#### ProxyJump
-
-```shell
-ssh -o "ProxyJump root@8.8.8.8" root@1.1.1.1
-```
-
-#### ProxyCommand
-
-- 写法一
-
-<mark>注意</mark>：`%h` 和 `%p` 之间是 `:` 而不是空格。
-
-```shell
-ssh -o "ProxyCommand ssh root@8.8.8.8 -W %h:%p" root@1.1.1.1
-```
-
-- 写法二
-
-使用这条命令，必须先安装 [netcat](https://eternallybored.org/misc/netcat/) 并将其添加至环境变量。
-
-```shell
-ssh -o "ProxyCommand ssh root@8.8.8.8 nc %h %p" root@1.1.1.1
-```
-
-#### 写入配置文件
-
-即写入到 `~/.ssh/config` 文件中，这个我目前没有需求，同样可以查看这篇[文章](https://www.xiebruce.top/650.html#i-9)获取详细内容。
+[Differentiate socks5h from socks5 and socks4a from socks4 when handling proxy string]: https://github.com/urllib3/urllib3/issues/1035
+[Git for Windows]: https://gitforwindows.org
+[laispace/git 设置和取消代理]: https://gist.github.com/laispace/666dd7b27e9116faece6
+[TUN 模式]: https://docs.cfw.lbyczf.com/contents/tun.html
