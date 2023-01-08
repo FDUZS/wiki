@@ -12,11 +12,15 @@ Ed25519（推荐）
 
 将下面尖括号及内部替换成想要的。`-f` 参数指定生成的文件名，如 `vps_ed25519`，`-C` 参数起注释（comment）作用。下同。
 
-`ssh-keygen -t ed25519 -f <id>_ed25519 -C "<comment>"`
+```shell
+ssh-keygen -t ed25519 -f <id>_ed25519 -C "<comment>"
+```
 
 RSA（仅推荐 2048 位以上）
 
-`ssh-keygen -t rsa -b 4096 -f <id>_rsa -C "<comment>"`
+```shell
+ssh-keygen -t rsa -b 4096 -f <id>_rsa -C "<comment>"
+```
 
 ## SSH 加速
 
