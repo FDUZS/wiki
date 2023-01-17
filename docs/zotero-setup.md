@@ -2,11 +2,11 @@
 
 恰逢 Zotero 6.0 正式版发布没多久，来填两年多前留的这个坑，应该不会太晚。主要讲一讲如何设置并且快速上手使用，而且根据我的观察，很多人对其中一些概念分得似乎不是很清，影响了他们的工作流程设定。
 
-### 前置要求
+## 前置要求
 
 在开始之前，先安装下面的插件和软件。当然，假定你已经安装了 [Zotero](https://www.zotero.org/download/) 最新版以及你所使用的浏览器对应的 Zotero Connector 插件。
 
-#### 插件篇
+### 插件篇
 
 - [ZotFile](http://zotfile.com/) 可以方便添加附件及重命名
 
@@ -16,11 +16,11 @@
 
 - [Zotero Scihub](https://github.com/ethanwillis/zotero-scihub) 可帮助你尝试从 Sci-Hub 上下载文献
 
-#### 软件篇
+### 软件篇
 
 - [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) 上面的茉莉花插件需要，可帮助自动生成和添加 PDF 书签（仅在支持的情况下，如国内硕博论文和一些外文期刊。下载硕博论文 PDF 版，可转到[知网海外版](https://chn.oversea.cnki.net/index/)）。你可通过 [Scoop](https://www.iamzs.top/archives/scoop-guidebook.html) 安装 `scoop install pdftk`。当然，也可手动[安装](https://www.pdflabs.com/tools/pdftk-server/)。由于我使用的是 Windows，如果你是其他系统的话，请到上面茉莉花页面查看对应安装说明。
 
-#### 账号篇
+### 账号篇
 
 - Zotero 账号，官网注册即可
 
@@ -28,7 +28,7 @@
 
 - 任一你常用的云存储服务，如 OneDrive 等，下文以此为例
 
-### 软件及插件设置
+## 软件及插件设置
 
 以下描述中英文参杂，我也懒得切换软件语言和配图，还请仔细查找对照设置项。以下选项属个人偏好，如果第一次使用的话，可完全根据我的来，之后再作调整。
 
@@ -38,9 +38,9 @@
 
 因此，如果不需要在平板上看文献的话，我不建议使用 WebDAV 同步。顺嘴说一句，团队类型的文献库即使是附件也只能通过官方同步，不过个人使用可以先不管。
 
-#### 两种路径共有设置
+### 两种路径共有设置
 
-**General**
+#### General
 
 - 取消勾选 Automatically take snapshots when creating items from web pages
 
@@ -54,11 +54,11 @@
 
   不让软件自动打标签
 
-**Cite**
+#### Cite
 
 - 添加国标引用和著录样式，留给你自己去探索
 
-**茉莉花插件设置**
+#### 茉莉花插件
 
 - 勾选 Retrieve CNKI meta data when add Chinese articles
 
@@ -66,19 +66,19 @@
 
 - 在 Unofficial Translators Repository 中更新所有解析器，并在 浏览器插件设置 Advanced - Translators 中点击 Update Translators
 
-**Zotero Scihub 插件**
+#### Zotero Scihub 插件
 
 - 取消勾选自动下载 PDF，在新版本中它可能会打断浏览器插件和茉莉花插件的文献下载
 
-- 根据实际情况修改 URL，如 https://sci-hub.se/
+- 根据实际情况修改 URL，如 <https://sci-hub.se/>
 
-**ZotFile 插件设置**
+#### ZotFile 插件
 
 - Source Folder for Attaching Files 设置为常用的下载文件夹
 
 - Other Advanced Settings 选择 Always rename
 
-#### 区别设置
+### 区别设置
 
 === "只在桌面端使用"
 
@@ -102,7 +102,7 @@
 
     - 在 iPad 上登录账号，并将同步方式改为 WebDAV，使用方式同上
 
-### 结尾
+## 结尾
 
 至此，大致的工作流已经形成了。
 

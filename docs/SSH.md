@@ -83,7 +83,7 @@ ssh -o "ProxyJump root@8.8.8.8" root@1.1.1.1
 
 - 写法一
 
-<mark>注意</mark>：`%h` 和 `%p` 之间是 `:` 而不是空格。
+==注意==：`%h` 和 `%p` 之间是 `:` 而不是空格。
 
 ```shell
 ssh -o "ProxyCommand ssh root@8.8.8.8 -W %h:%p" root@1.1.1.1

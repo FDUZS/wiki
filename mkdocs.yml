@@ -2,15 +2,54 @@ site_name: My Docs
 site_url: https://fduzs.github.io/wiki
 theme:
   name: material
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
 
 markdown_extensions:
   # Content tabs
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  
   # Images
   - attr_list
   - md_in_html
+  
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  # - pymdownx.superfences
+
+  # Data tables
+  - tables
+
+  # Footnotes
+  - footnotes
+
+  # Icons, Emojis
+  # - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
   # Lightbox

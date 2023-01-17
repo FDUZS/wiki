@@ -2,11 +2,11 @@
 
 「error: Microsoft Visual C++ 14.0 or greater is required」是不是令你痛苦不堪、眉头紧皱？是不是在万般搜索后仍旧无果？是不是网上经验教训一大堆，但是都不能从根本上解决问题？那么，以下可能是你能找到的最全面准确的办法。
 
-### Python 版本
+## Python 版本
 
 以我正在使用的 `Python 3.7.6` 为例。
 
-### Visual C++ 版本
+## Visual C++ 版本
 
 与上面相对应，Visual C++ 版本应为 `14.x`。
 
@@ -20,47 +20,19 @@
 
 以我安装的 `14.27.29016.0` 为例。
 
-### 三者对应关系
+## 三者对应关系
 
-<table>
-<thead>
-  <tr>
-    <th colspan="2">Visual C++</th>
-    <th>CPython</th>
-    <th>Visual Studio</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="3">14.x</td>
-    <td>14.27.x</td>
-    <td rowspan="3">3.5, 3.6, 3.7, 3.8</td>
-    <td>2019</td>
-  </tr>
-  <tr>
-    <td>14.16.x</td>
-    <td>2017</td>
-  </tr>
-  <tr>
-    <td>14.0.x</td>
-    <td>2015</td>
-  </tr>
-  <tr>
-    <td colspan="2">10</td>
-    <td>3.3, 3.4</td>
-    <td>2010</td>
-  </tr>
-  <tr>
-    <td colspan="2">9</td>
-    <td>2.6, 2.7, 3.0, 3.1, 3.2</td>
-    <td>2008</td>
-  </tr>
-</tbody>
-</table>
+| Visual C++ | CPython                 | Visual Studio |
+|------------|-------------------------|---------------|
+| 14.27.x    | 3.5, 3.6, 3.7, 3.8      | 2019          |
+| 14.16.x    | 3.5, 3.6, 3.7, 3.8      | 2017          |
+| 14.0.x     | 3.5, 3.6, 3.7, 3.8      | 2015          |
+| 10         | 3.3, 3.4                | 2010          |
+| 9          | 2.6, 2.7, 3.0, 3.1, 3.2 | 2008          |
 
-### 开始安装
+## 开始安装
 
-<mark>注意</mark>：以 Python 3.7.6，只安装（不用费劲安装 Visual Studio 2019）Microsoft Visual C++ 14.2 为例。
+==注意==：以 Python 3.7.6，只安装（不用费劲安装 Visual Studio 2019）Microsoft Visual C++ 14.2 为例。
 
 1. `pip install --upgrade setuptools` 确保 setuptools 版本为 34.4.0 及以上
 
@@ -70,7 +42,7 @@
 
 ![VS-Build-Tools-2019](/wiki/images/2010/VS-Build-Tools-2019.png)
 
-### 其他
+## 其他
 
 - 官方文档：[Which Microsoft Visual C++ compiler to use with a specific Python version ?](https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F)
 
