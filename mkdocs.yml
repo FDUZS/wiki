@@ -3,8 +3,15 @@ site_url: https://fduzs.github.io/wiki
 theme:
   name: material
 
-# Content tabs
 markdown_extensions:
+  # Content tabs
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
+  # Images
+  - attr_list
+  - md_in_html
+
+plugins:
+  # Lightbox
+  - glightbox
