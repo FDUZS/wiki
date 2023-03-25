@@ -90,5 +90,5 @@
 [低价机场]: https://xn--6nq0hk9tdjr.com/#/register?code=W82iVzzx
 [性价比机场]: https://xn--6nq44r2uh9rhj7f.com/#/register?code=aBeCVmwb
 [翻墙机场]: https://xn--mest5a943ag8x.net/#/register?code=2nqGkJAX
-[赔钱机场]: https://xn--mes358aby2apfg.com/#/register?code=D3kpZSNf
+[赔钱机场]: https://xn--mes358aby2apfg.com/#/register?code=Wet8dnD6
 [机场图鉴]: https://aijichang.com/6379/
