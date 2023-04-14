@@ -82,13 +82,13 @@
 
 套餐更夸张，或许是名字由来吧，年付 7 元每月 1T 流量。其他还有月付 4 元每月 5T 流量以及一次性流量套餐等。
 
-[EFCloud]: https://www.efcloud.cc/#/register?code=b1mJgcVn
-[一元机场]: https://xn--4gq62f52gdss.com/#/register?code=vmSTAzxE
-[三分机场]: https://xn--ehq00hgtfdmt.xyz/#/register?code=pnt42X3f
-[两元店]: https://xn--5hqx9equq.com/#/register?code=BdMgCUmr
-[五毛机场]: https://xn--dlqs4sc0nope.com/#/register?code=BGDw1TfV
-[低价机场]: https://xn--6nq0hk9tdjr.com/#/register?code=W82iVzzx
-[性价比机场]: https://xn--6nq44r2uh9rhj7f.com/#/register?code=aBeCVmwb
-[翻墙机场]: https://xn--mest5a943ag8x.net/#/register?code=2nqGkJAX
-[赔钱机场]: https://xn--mes358aby2apfg.com/#/register?code=Wet8dnD6
+[EFCloud]: https://link.950327.xyz/efcloud
+[一元机场]: https://link.950327.xyz/yyjc
+[三分机场]: https://link.950327.xyz/sfjc
+[两元店]: https://link.950327.xyz/lyd
+[五毛机场]: https://link.950327.xyz/wmjc
+[低价机场]: https://link.950327.xyz/djjc
+[性价比机场]: https://link.950327.xyz/xjbjc
+[翻墙机场]: https://link.950327.xyz/fqjc
+[赔钱机场]: https://link.950327.xyz/pqjc
 [机场图鉴]: https://aijichang.com/6379/
