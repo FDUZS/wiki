@@ -46,11 +46,13 @@
 
 ## 五毛机场
 
-[注册][五毛机场]无需验证邮箱，可使用虚假邮箱。
+??? warning "最晚于 2023 年 5 月 24 日前跑路"
 
-默认佣金比例 10%
+    注册无需验证邮箱，可使用虚假邮箱。
 
-提供的套餐从价格上来说其实不能算廉价了，月付 10 元至 50 元，每月流量从 120G 到 520G 不等。也可一次性购买流量。
+    默认佣金比例 10%
+
+    提供的套餐从价格上来说其实不能算廉价了，月付 10 元至 50 元，每月流量从 120G 到 520G 不等。也可一次性购买流量。
 
 ## 低价机场
 
@@ -88,7 +90,6 @@
 [一元机场]: https://link.shuaizheng.net/yyjc
 [三分机场]: https://link.shuaizheng.net/sfjc
 [两元店]: https://link.shuaizheng.net/lyd
-[五毛机场]: https://link.shuaizheng.net/wmjc
 [低价机场]: https://link.shuaizheng.net/djjc
 [性价比机场]: https://link.shuaizheng.net/xjbjc
 [翻墙机场]: https://link.shuaizheng.net/fqjc
