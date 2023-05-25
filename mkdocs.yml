@@ -67,10 +67,6 @@ plugins:
         - en
   # - social
   - tags:
-  - git-revision-date-localized:
-      enable_creation_date: true
-      fallback_to_build_date: true
-      type: date
 
 extra:
   generator: true
