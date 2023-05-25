@@ -139,5 +139,3 @@ nav:
   - VPS:
       - vps/index.md
       - Scaleway Stardust IPv6 VPS: vps/scaleway-stardust-ipv6-vps.md
-  - Test:
-      - 测试: test/demo.md
