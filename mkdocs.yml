@@ -64,7 +64,6 @@ plugins:
   - glightbox:
   - search:
       lang:
-        - zh
         - en
   # - social
   - tags:
