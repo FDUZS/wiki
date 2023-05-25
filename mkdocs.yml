@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Wiki
 site_url: https://fduzs.github.io/wiki
 
 repo_name: FDUZS/wiki
@@ -121,5 +121,23 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - GFW:
+      - gfw/index.md
+      - 廉价机场众生相: gfw/cheap-proxy-providers.md
+      - 机场订阅聚合与转换: gfw/proxy-bundle-and-conversion.md
+      - 常用代理设置: gfw/proxy-configurations.md
+      - 用 IPv6 来拯救你的校园网: gfw/ssr-ipv6-proxifier.md
+  - AI:
+      - ai/index.md
+  - Python:
+      - python/index.md
+      - Microsoft Visual C++ 14.0 or greater is required: python/python-vc-14-error.md
+  - Tool:
+      - tool/index.md
+      - SSH 设置: tool/ssh.md
+      - Zotero 设置: tool/zotero-setup.md
+  - VPS:
+      - vps/index.md
+      - Scaleway Stardust IPv6 VPS: vps/scaleway-stardust-ipv6-vps.md
   - Test:
       - 测试: test/demo.md
