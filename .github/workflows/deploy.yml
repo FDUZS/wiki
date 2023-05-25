@@ -23,6 +23,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+      - run: pip install --upgrade pip
       - run: pip install mkdocs-material
       - run: pip install mkdocs-glightbox
       - run: pip install git-revision-date-localized
