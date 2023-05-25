@@ -1,5 +1,9 @@
 site_name: My Docs
 site_url: https://fduzs.github.io/wiki
+
+repo_name: FDUZS/wiki
+repo_url: https://github.com/FDUZS/wiki
+
 theme:
   name: material
   icon:
@@ -16,24 +20,88 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css: fontawesome/brands/css3
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    # - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+plugins:
+  # Lightbox
+  - glightbox:
+  - search:
+      lang:
+        - zh
+        - en
+  # - social
+  - tags:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+      type: date
+
+extra:
+  generator: true
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FDUZS
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/shuaizheng_org
 
 markdown_extensions:
   # Content tabs
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  
+
   # Images
   - attr_list
   - md_in_html
-  
+
   # Formatting
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  
+
   # Admonitions
   - admonition
   - pymdownx.details
@@ -51,6 +119,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
-plugins:
-  # Lightbox
-  - glightbox
+nav:
+  - Home: index.md
+  - Test:
+      - 测试: test/demo.md

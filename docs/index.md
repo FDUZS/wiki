@@ -1,3 +1,12 @@
+---
+tags:
+    - HTML5
+    - JavaScript
+    - CSS
+# hide:
+#     - tags
+---
+
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
