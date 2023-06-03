@@ -119,7 +119,7 @@ nav:
   - GFW:
       - gfw/index.md
       - 廉价机场众生相: gfw/cheap-proxy-providers.md
-      - 机场订阅聚合与转换: gfw/proxy-bundle-and-conversion.md
+      - 机场订阅聚合与转换: gfw/proxy-aggregation-and-conversion.md
       - 常用代理设置: gfw/proxy-configurations.md
       - 用 IPv6 来拯救你的校园网: gfw/ssr-ipv6-proxifier.md
   - AI:
