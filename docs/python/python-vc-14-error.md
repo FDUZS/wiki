@@ -40,7 +40,7 @@
 
 3. 勾选左侧最上方 C++ build tools，然后查看右侧，确保 MSVC v142 - VS 2019 C++ x64/x86 build tools 和 Windows 10 SDK 被选中。默认情况下应该不需要动，直接点击安装，等待完成即可
 
-![VS-Build-Tools-2019](/wiki/images/2010/VS-Build-Tools-2019.png)
+![VS-Build-Tools-2019](https://img.shuaizheng.net/2307/VS-Build-Tools-2019.png)
 
 ## 其他
 

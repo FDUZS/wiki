@@ -24,7 +24,7 @@
 
 先通过 `scw init` 进行初始化并生成配置文件，如图
 
-![scw-init](/wiki/images/2301/scw-init.png)
+![scw-init](https://img.shuaizheng.net/2307/scw-init.png)
 
 通过以下命令创建服务器
 
