@@ -86,12 +86,12 @@
 
 套餐更夸张，或许是名字由来吧，年付 7 元每月 1T 流量。其他还有月付 4 元每月 5T 流量以及一次性流量套餐等。
 
-[EFCloud]: https://link.shuaizheng.net/efcloud
-[一元机场]: https://link.shuaizheng.net/yyjc
-[三分机场]: https://link.shuaizheng.net/sfjc
-[两元店]: https://link.shuaizheng.net/lyd
-[低价机场]: https://link.shuaizheng.net/djjc
-[性价比机场]: https://link.shuaizheng.net/xjbjc
-[翻墙机场]: https://link.shuaizheng.net/fqjc
-[赔钱机场]: https://link.shuaizheng.net/pqjc
+[EFCloud]: https://link.zs.fyi/efcloud
+[一元机场]: https://link.zs.fyi/yyjc
+[三分机场]: https://link.zs.fyi/sfjc
+[两元店]: https://link.zs.fyi/lyd
+[低价机场]: https://link.zs.fyi/djjc
+[性价比机场]: https://link.zs.fyi/xjbjc
+[翻墙机场]: https://link.zs.fyi/fqjc
+[赔钱机场]: https://link.zs.fyi/pqjc
 [机场图鉴]: https://aijichang.com/6379/
