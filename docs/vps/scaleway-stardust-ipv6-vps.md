@@ -115,7 +115,7 @@ wgcf generate
 
 修改 `wgcf-profile.conf` 配置文件
 
-- 将 `engage.cloudflareclient.com` 替换为 `[2606:4700:d0::a29f:c001]`
+- 将 `engage.cloudflareclient.com:2408` 替换为 `[2606:4700:d0::a29f:c001]:2408`
 - 删除或注释掉 `AllowedIPs = ::/0`
 - 将 `DNS = 1.1.1.1` 修改为 `DNS = 2606:4700:4700::1111`
 
