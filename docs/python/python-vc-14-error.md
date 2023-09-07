@@ -2,6 +2,14 @@
 
 「error: Microsoft Visual C++ 14.0 or greater is required」是不是令你痛苦不堪、眉头紧皱？是不是在万般搜索后仍旧无果？是不是网上经验教训一大堆，但是都不能从根本上解决问题？那么，以下可能是你能找到的最全面准确的办法。
 
+For those who can't read Chinese, I have prepared a simplified guide for you. Here are the steps to follow:
+
+1. Ensure that you have the latest version of setuptools installed. Any version above 34.4.0 should work fine.
+2. Download and install Microsoft C++ Build Tools from this [page][Microsoft C++ Build Tools] and wait for the installation to complete.
+3. Modify and install the necessary components by checking the "Desktop development with C++" workload (previously called "C++ build tools") checkbox on the left side and installing the modules that are checked by default on the right side (please refer to the screenshot below). Then proceed with the installation.
+
+![Visual Studio Build Tools 2022](https://img.shuaizheng.org/2309/ULEAdYbnBV.png)
+
 ## Python 版本
 
 以我正在使用的 `Python 3.7.6` 为例。
@@ -44,8 +52,11 @@
 
 ## 其他
 
-- 官方文档：[Which Microsoft Visual C++ compiler to use with a specific Python version ?](https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F)
+- Python 官方文档：[Which Microsoft Visual C++ compiler to use with a specific Python version?]
+- 各版本 Visual C++ 下载地址：[The latest supported Visual C++ downloads]
+- Visual Studio 2017 及之前的版本下载地址：[Still want an older version?]
 
-- 各版本 Visual C++ 下载地址：[The latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
-
-- Visual Studio 2017 及之前的版本下载地址：[Still want an older version?](https://visualstudio.microsoft.com/vs/older-downloads/)
+[Microsoft C++ Build Tools]: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+[Which Microsoft Visual C++ compiler to use with a specific Python version?]: https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F
+[The latest supported Visual C++ downloads]: https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+[Still want an older version?]: https://visualstudio.microsoft.com/vs/older-downloads/
